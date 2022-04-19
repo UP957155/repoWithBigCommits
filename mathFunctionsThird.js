@@ -120,17 +120,17 @@ console.log(createUuid());
 
 //9. Write a JavaScript function to convert a positive number to negative number.
 
-function posToNeg(num){
-    return -Math.abs(num);
+function pos_to_neg(number){
+    return -Math.abs(number);
 };
-console.log(posToNeg(15));
+console.log(pos_to_neg(15));
 
 //10. Write a JavaScript function to round up an integer value to the next multiple of 5.
 
-function intRound5(num){
+function int_round_5(num){
     return Math.ceil(num/5)*5;
 }
 
-console.log(intRound5(32));
-console.log(intRound5(137));
-console.log(intRound5(142));
+console.log(int_Round_5(34));
+console.log(int_round5(135));
+console.log(integerRound5(144));

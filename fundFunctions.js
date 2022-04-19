@@ -119,26 +119,26 @@ console.log(filter_specValues(ARR2, 'b'));
 
 //#Source https://bit.ly/2neWfJ2
 
-const powerSet = arr => arr.reduce((a, v) => a.concat(a.map(r => [v].concat(r))), [[]]);
-console.log(powerSet([1, 2]));
-console.log(powerSet([1, 2, 3]));
+const power_set = arr => arr.reduce((x, y) => x.concat(x.map(r => [y].concat(r))), [[]]);
+console.log(power_set([1, 2]));
+console.log(power_Set([1, 2, 3]));
 console.log(powerSet([1, 2, 3, 4]));
 
 //10. Write a JavaScript program to extract out the values at the specified indexes from a specified array.
 
 //#Source https://bit.ly/2neWfJ2
 
-const pullAtIndex = (arr, pullArr) => {
-    let removed = [];
-    let pulled = arr
-      .map((v, i) => (pullArr.includes(i) ? removed.push(v) : v))
-      .filter((v, i) => !pullArr.includes(i));
-    arr.length = 0;
-    pulled.forEach(v => arr.push(v));
-    return removed;
+const pull_at_index = (arr, pull_array) => {
+  let removed = [];
+  let pulled = arr
+    .map((v, i) => (pull_array.includes(i) ? removed.push(v) : v))
+    .filter((v, i) => !pull_array.includes(i));
+  arr.length = 0;
+  pulled.forEach(v => arr.push(v));
+  return removed;
 };
 let arr1 = ['a', 'b', 'c', 'd', 'e', 'f'];
-console.log(pullAtIndex(arr1, [1, 3]));
+console.log(pull_at_index(arr1, [1, 3]));
 let arr2 =  [1, 2, 3, 4, 5, 6, 7];
-console.log(pullAtIndex(arr2, [4]));
+console.log(pull_at_index(arr2, [4]));
   

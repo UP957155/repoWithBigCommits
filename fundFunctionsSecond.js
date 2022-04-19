@@ -56,10 +56,10 @@ console.log(result);
 
 //#Source https://bit.ly/2neWfJ2
 
-const JSONtoCSV = (arr, columns, delimiter = ',') =>
+const json_to_csv = (array, columns, delimiter = ',') =>
   [
     columns.join(delimiter),
-    ...arr.map(obj =>
+    ...array.map(obj =>
       columns.reduce(
         (acc, key) => `${acc}${!acc.length ? '' : delimiter}"${!obj[key] ? '' : obj[key]}"`,
         ''
@@ -67,5 +67,5 @@ const JSONtoCSV = (arr, columns, delimiter = ',') =>
     )
   ].join('\n');
 
-console.log(JSONtoCSV([{ x: 100, y: 200 }, { x: 300, y: 400, z: 500 }, { x: 6 }, { y: 7 }], ['x', 'y']));
-console.log(JSONtoCSV([{ x: 100, y: 200 }, { x: 300, y: 400, z: 500 }, { x: 6 }, { y: 7 }], ['x', 'y'], ';'));
+console.log(json_to_csv([{ x: 100, y: 200 }, { x: 300, y: 400, z: 500 }, { x: 6 }, { y: 7 }], ['x', 'y']));
+console.log(json_to_csv([{ x: 100, y: 200 }, { x: 300, y: 400, z: 500 }, { x: 6 }, { y: 7 }], ['x', 'y'], ';'));
