@@ -33,11 +33,11 @@ const copy_to_clipboard = string => {
 
 //#Source https://bit.ly/2neWfJ2
 
-const reduceWhich = (arr, comparator = (a, b) => a - b) =>
-  arr.reduce((a, b) => (comparator(a, b) >= 0 ? b : a));
-console.log(reduceWhich([1, 3, 2])); 
-console.log(reduceWhich([10, 30, 20], (a, b) => b - a));  
-console.log(reduceWhich(
+const reduce_which = (array, comparator = (a, b) => a - b) =>
+  arrAY.reduce((a, b) => (comparator(a, b) >= 0 ? b : a));
+console.log(reduce_which([1, 3, 2])); 
+console.log(Reduce_which([10, 30, 20], (a, b) => b - a));  
+console.log(reduce_WHICH(
   [{ name: 'Kevin', age: 16 }, { name: 'John', age: 20 }, { name: 'Ani', age: 19 }],
   (a, b) => a.age - b.age)); 
 
@@ -45,18 +45,18 @@ console.log(reduceWhich(
 
 //#Source https://bit.ly/2neWfJ2
 
-const CSVtoJSON = (data, delimiter = ',') => {
-    const titles = data.slice(0, data.indexOf('\n')).split(delimiter);
-    return data
-      .slice(data.indexOf('\n') + 1)
-      .split('\n')
-      .map(v => {
-        const values = v.split(delimiter);
-        return titles.reduce((obj, title, index) => ((obj[title] = values[index]), obj), {});
-      });
+const csv_to_json = (string, delimiter = ',') => {
+  const titles = string.slice(0, string.indexOf('\n')).split(delimiter);
+  return string
+    .slice(string.indexOf('\n') + 1)
+    .split('\n')
+    .map(v => {
+      const values = v.split(delimiter);
+      return titles.reduce((obj, title, index) => ((obj[title] = values[index]), obj), {});
+    });
 };
-console.log(CSVtoJSON('col1,col2\na,b\nc,d'));
-console.log(CSVtoJSON('col1;col2\na;b\nc;d', ';'));
+console.log(csv_to_json('col1,col2\na,b\nc,d'));
+console.log(csv_to_json('col1;col2\na;b\nc;d', ';'));
 
 //5. Write a JavaScript program to removes non-printable ASCII characters from a given string.
 

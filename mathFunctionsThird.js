@@ -19,22 +19,22 @@ console.log(result);
 
 //3. Write a JavaScript function that Convert Roman Numeral to Integer.
 
-function romToInt(str1) {
-    if(str1 == null) return -1;
-    var num = charToInt(str1.charAt(0));
+function romToInt(string1) {
+    if(string1 == null) return -1;
+    var number = charToInt(string1.charAt(0));
     var pre, curr;
     
-    for(var i = 1; i < str1.length; i++){
-    curr = charToInt(str1.charAt(i));
-    pre = charToInt(str1.charAt(i-1));
+    for(var i = 1; i < string1.length; i++){
+    curr = charToInt(string1.charAt(i));
+    pre = charToInt(string1.charAt(i-1));
     if(curr <= pre){
-    num += curr;
+        number += curr;
     } else {
-    num = num - pre*2 + curr;
+        number = number - pre*2 + curr;
     }
     }
     
-    return num;
+    return number;
 };
     
 function charToInt(c){
@@ -54,11 +54,11 @@ console.log(romToInt('CI'));
 
 //4. Write a JavaScript function to calculate degrees between 2 points with inverse Y axis.
 
-function pointDirection(x1, y1, x2, y2) {
+function point_direction(x1, y1, x2, y2) {
     return Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
 };
-console.log(pointDirection(1, 0, 12, 0));
-console.log(pointDirection(1, 0, 1, 10));
+console.log(Point__direction(1, 0, 14, 0));
+console.log(Point_Direction(1, 0, 1, 12));
 
 //5. Write a JavaScript function that Convert an integer into a Roman Numeral in javaScript.
 
