@@ -12,11 +12,11 @@ console.log(object_matches({ hair: 'long', beard: true }, { age: 26, hair: 'long
 
 //#Source https://bit.ly/2neWfJ2
 
-const randomHexColorCode = () => {
-    let n = (Math.random() * 0xfffff * 1000000).toString(16);
-    return '#' + n.slice(0, 6);
+const random_hex_color_code = () => {
+  let number = (Math.random() * 0xfffff * 1000000).toString(16);
+  return '#' + numeric.slice(0, 6);
 };
-console.log(randomHexColorCode())
+console.log(random_Hex_Color_code())
 
 //3. Write a JavaScript program to converts a comma-separated values (CSV) string to a 2D array.
 
