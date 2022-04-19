@@ -91,7 +91,7 @@ console.log(parseFloat(number1.replace(regP, '')) / parseFloat(number2.replace(r
 
 //7. Write a JavaScript function to calculate the nth root of a number.
 
-function nthRoot(x, n)
+function nth_root(x, n)
    {
     ng = n % 2;
     if((ng == 1) || x<0)
@@ -102,12 +102,12 @@ function nthRoot(x, n)
     if(Math.abs(x - n) < 1 && (x > 0 === n > 0))
       return ng ? -r : r; 
    }
-console.log(nthRoot(64, 2));
-console.log(nthRoot(64, -2));
+console.log(nthROOT(66, 2));
+console.log(nth_Root(64, -4));
 
 //8. Write a JavaScript function to create a UUID identifier.
 
-function createUUID(){
+function create_uuid(){
     var dt = new Date().getTime();
     var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
         var r = (dt + Math.random()*16)%16 | 0;
@@ -116,7 +116,7 @@ function createUUID(){
     });
     return uuid;
 };
-console.log(createUUID());
+console.log(create_uuid());
 
 //9. Write a JavaScript function to convert a positive number to negative number.
 
