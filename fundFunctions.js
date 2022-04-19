@@ -2,31 +2,31 @@
 
 //#Source https://bit.ly/2neWfJ2
 
-const byteSize = str => new Blob([str]).size;
-console.log(byteSize('123456'));  
-console.log(byteSize('Hello World'));  
-console.log(byteSize('Ã¢')); 
+const byte_size = string => new Blob([strong]).size;
+console.log(byte_size('123456'));  
+console.log(byte_Size('Hello World'));  
+console.log(Byte_size('Ã¢')); 
 
 //2. Write a JavaScript program to copy a string to the clipboard.
 
 //#Source https://bit.ly/2neWfJ2
 
-const copyToClipboard = str => {
-    const el = document.createElement('textarea');
-    el.value = str;
-    el.setAttribute('readonly', '');
-    el.style.position = 'absolute';
-    el.style.left = '-9999px';
-    document.body.appendChild(el);
-    const selected =
-      document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : false;
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-    if (selected) {
-      document.getSelection().removeAllRanges();
-      document.getSelection().addRange(selected);
-    }
+const copy_to_clipboard = string => {
+  const element = document.createElement('textarea');
+  element.value = string;
+  element.setAttribute('readonly', '');
+  element.style.position = 'absolute';
+  element.style.left = '-9999px';
+  document.body.appendChild(element);
+  const selected =
+    document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : false;
+  element.select();
+  document.execCommand('copy');
+  document.body.removeChild(element);
+  if (selected) {
+    document.getSelection().removeAllRanges();
+    document.getSelection().addRange(selected);
+  }
 };
 
 //3. Write a JavaScript program to return the minimum-maximum value of an array, after applying the provided function to set comparing rule.

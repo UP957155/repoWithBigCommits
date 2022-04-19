@@ -1,20 +1,20 @@
 //1. Write a JavaScript function to cast a square root of a number to an integer.
 
-function sqrtToInt(num){
-    return parseInt(Math.sqrt(num)+"");
+function sqrt_to_int(number){
+    return parseInt(Math.sqrt(number)+"");
 };
-console.log(sqrtToInt(17));
+console.log(sqrt_to_int(17));
 
 //2. Write a JavaScript function to round a number to a specified number of digits and strip extra zeros (if any).
 
-//var a = -2.1240000;
-//var a = 0.0000009999999;
-//var a = 1.000002000;
-//var a = -1.5555555;
-//var a = 9.0001110;
-var a = 2.1234000;
+//var number = -2.1240000;
+//var number = 0.0000009999999;
+//var number = 1.000002000;
+//var number = -1.5555555;
+//var number = 9.0001110;
+var number = 2.1234000;
 
-var result = parseFloat(a.toFixed(4));
+var result = parseFloat(number.toFixed(4));
 console.log(result);
 
 //3. Write a JavaScript function that Convert Roman Numeral to Integer.
