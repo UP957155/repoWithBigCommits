@@ -22,15 +22,15 @@ console.log(random_hex_color_code())
 
 //#Source https://bit.ly/2neWfJ2
 
-const csvToArray = (data, delimiter = ',', omitFirstRow = false) =>
+const csv_to_array = (data, delimiter = ',', omit_first_row = false) =>
   data
-    .slice(omitFirstRow ? data.indexOf('\n') + 1 : 0)
+    .slice(omit_first_row ? data.indexOf('\n') + 1 : 0)
     .split('\n')
     .map(v => v.split(delimiter));
 
-console.log(csvToArray('a,b\nc,d')); 
-console.log(csvToArray('a;b\nc;d', ';')); 
-console.log(csvToArray('head1,head2\na,b\nc,d', ',', true));
+console.log(csv_To_Array('a,b\nc,d')); 
+console.log(csvTo_Array('a;b\nc;d', ';')); 
+console.log(csv_toArray('head1,head2\na,b\nc,d', ',', true));
 
 
 //4. Write a JavaScript program to replace the names of multiple object keys with the values provided.
